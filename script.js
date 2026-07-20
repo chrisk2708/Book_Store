@@ -62,7 +62,7 @@ function renderUserComments(i) {
 
 function addComment(i) {
     let inputRef = document.getElementById(`inputComment${i}`).value;
-    let obj = [{ name: "", comment: "" }];
+    let obj = { name: "default", comment: "default" };
 
     if (inputRef != "") {
         obj.name = "User";

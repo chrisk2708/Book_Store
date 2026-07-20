@@ -27,7 +27,7 @@ let books = [
                 name: "UserLady",
                 comment:
                     "Das Buch war spannend und leicht zu lesen. Die Handlung hat mich bis zum Ende gefesselt.",
-            }
+            },
         ],
     },
     {
