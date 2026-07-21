@@ -19,14 +19,14 @@ let books = [
                     "Das Buch war spannend und leicht zu lesen. Die Handlung hat mich bis zum Ende gefesselt.",
             },
             {
-                name: "Leser123",
+                name: "Master_X",
                 comment:
-                    "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
+                    "Die Geschichte hat mich von der ersten bis zur letzten Seite gefesselt.",
             },
             {
-                name: "UserLady",
+                name: "Ute Buch",
                 comment:
-                    "Das Buch war spannend und leicht zu lesen. Die Handlung hat mich bis zum Ende gefesselt.",
+                    "Eines der besten Bücher, die ich dieses Jahr gelesen habe.",
             },
         ],
     },
@@ -48,7 +48,17 @@ let books = [
                 name: "Mr. TRex",
                 comment:
                     "Die Geschichte war unterhaltsam, hatte aber an manchen Stellen einige Längen.",
-            }
+            },
+            {
+                name: "Anna F.",
+                comment:
+                    "Ein absolutes Highlight! Ich konnte das Buch kaum aus der Hand legen.",
+            },
+            {
+                name: "Melli",
+                comment:
+                    "Wunderschön geschrieben und mit viel Liebe zum Detail.",
+            },
         ],
     },
     {
@@ -69,7 +79,17 @@ let books = [
                 name: "Martin_Halt",
                 comment:
                     "Das Ende war überraschend und hat gut zur Geschichte gepasst.",
-            }
+            },
+            {
+                name: "Annika S.",
+                comment:
+                    "Klare Leseempfehlung für alle, die spannende Geschichten mögen.",
+            },
+            {
+                name: "Max Schuster",
+                comment:
+                    "Mit jeder Seite wurde es spannender – das Ende hat mich komplett überrascht!",
+            },
         ],
     },
     {
@@ -90,7 +110,17 @@ let books = [
                 name: "Der Reisende",
                 comment:
                     "Manche Kapitel waren etwas lang, insgesamt hat mir das Buch aber gut gefallen.",
-            }
+            },
+            {
+                name: "Esel_01",
+                comment:
+                    "Ein echter Pageturner mit unerwarteten Wendungen.",
+            },
+            {
+                name: "Detlef U.",
+                comment:
+                    "Die Charaktere sind authentisch und die Handlung bleibt bis zum Schluss spannend.",
+            },
         ],
     },
     {
@@ -111,7 +141,17 @@ let books = [
                 name: "Patrick",
                 comment:
                     "Das Thema wurde interessant behandelt und hat meine Neugier geweckt.",
-            }
+            },
+            {
+                name: "Sandy",
+                comment:
+                    "Perfekt für Fans von Krimis und Thrillern.",
+            },
+            {
+                name: "Mr. Krabs",
+                comment:
+                    "Die Welt ist unglaublich kreativ und detailliert aufgebaut.",
+            },
         ],
     },
     {
@@ -132,7 +172,17 @@ let books = [
                 name: "Frieda Soda",
                 comment:
                     "Das Buch hat mich von der ersten bis zur letzten Seite begeistert.",
-            }
+            },
+            {
+                name: "Sandmann",
+                comment:
+                    "Ich wäre am liebsten noch länger in dieser Geschichte geblieben.",
+            },
+            {
+                name: "Eisenherz",
+                comment:
+                    "Magische Atmosphäre und tolle Charakterentwicklung.",
+            },
         ],
     },
     {
@@ -153,7 +203,17 @@ let books = [
                 name: "Master X",
                 comment:
                     "Ich fand die Handlung originell und abwechslungsreich.",
-            }
+            },
+            {
+                name: "Writer Hans",
+                comment:
+                    "Ein Muss für Fantasy-Fans!",
+            },
+            {
+                name: "Mathias H.",
+                comment:
+                    "Die Chemie zwischen den Figuren ist einfach großartig.",
+            },
         ],
     },
     {
@@ -174,7 +234,17 @@ let books = [
                 name: "JaneDoe",
                 comment:
                     "Das Buch war leicht verständlich und gut aufgebaut.",
-            }
+            },
+            {
+                name: "Banana Kevin",
+                comment:
+                    "Ein absolutes Lieblingsbuch – von der ersten bis zur letzten Seite spannend.",
+            },
+            {
+                name: "John der Alte",
+                comment:
+                    "Der Schreibstil ist unglaublich angenehm. Ich konnte das Buch kaum aus der Hand legen.",
+            },
         ],
     },
     {
@@ -195,7 +265,17 @@ let books = [
                 name: "Mary Poppins",
                 comment:
                     "Der Anfang war etwas langsam, aber danach wurde das Buch richtig interessant.",
-            }
+            },
+            {
+                name: "Leseratte",
+                comment:
+                    "Eine wunderschöne Geschichte mit unvergesslichen Charakteren.",
+            },
+            {
+                name: "Bücherwurm",
+                comment:
+                    "Definitiv eine Leseempfehlung für alle Bücherfans!",
+            },
         ],
     },
     {
@@ -216,7 +296,17 @@ let books = [
                 name: "Miraculix",
                 comment:
                     "Das Buch war informativ und gleichzeitig unterhaltsam.",
-            }
+            },
+            {
+                name: "Lois Lane",
+                comment:
+                    "Dieses Buch hat mich wirklich überrascht. Klare Empfehlung!",
+            },
+            {
+                name: "Der Hulk",
+                comment:
+                    "Jedes Kapitel endet mit einem Cliffhanger – einfach fesselnd.",
+            },
         ],
     },
     {
@@ -237,7 +327,17 @@ let books = [
                 name: "Mutti_32",
                 comment:
                     "Das Ende hätte für meinen Geschmack ausführlicher sein können.",
-            }
+            },
+            {
+                name: "Tabaluga",
+                comment:
+                    "Die Handlung war bis zum Schluss unvorhersehbar.",
+            },
+            {
+                name: "Tigerente03",
+                comment:
+                    "Perfekt für alle, die spannende Geschichten lieben.",
+            },
         ],
     },
     {
@@ -258,7 +358,17 @@ let books = [
                 name: "Merlin_08",
                 comment:
                     "Ich würde dieses Buch auf jeden Fall noch einmal lesen.",
-            }
+            },
+            {
+                name: "Die Elfe",
+                comment:
+                    "Ich musste unbedingt wissen, wie es ausgeht.",
+            },
+            {
+                name: "Der Varan",
+                comment:
+                    "Eine berührende Liebesgeschichte mit viel Gefühl.",
+            },
         ],
     },
 ];

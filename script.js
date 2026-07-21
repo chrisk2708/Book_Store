@@ -4,17 +4,21 @@ function init() {
 }
 
 function getFromLocalStorage() {
-    const myBooks = JSON.parse(localStorage.getItem("myBookstore"));
+    const myBooks = JSON.parse(localStorage.getItem("myBookstore")) || [];
     
     if (myBooks != null) {
         books = myBooks;
+        console.log(books);
+        
+    } else {
+        alert("Keine Daten vorhanden !")
     }
-    
 }
 
 function saveToLocalStorage() {
     localStorage.setItem("myBookstore", JSON.stringify(books));
 }
+renderBooks();
 
 function renderBooks() {
     const contentRef = document.getElementById('mainContent');
@@ -53,6 +57,8 @@ function toggleHeart(i) {
         books[i].liked = false;
         books[i].likes --;
     }
+    saveToLocalStorage();
+    getFromLocalStorage();
     renderBooks();
 };
 
@@ -65,6 +71,7 @@ function renderUserComments(i) {
         }
     }
     saveToLocalStorage();
+    getFromLocalStorage();
     return userComments;
 };
 
@@ -78,7 +85,7 @@ function addComment(i) {
         books[i].comments.push(obj);
     }
     saveToLocalStorage();
-    // getFromLocalStorage();
+    getFromLocalStorage();
     renderBooks();
     inputRef.value = "";
-}
+};
