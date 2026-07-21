@@ -1,15 +1,13 @@
 function init() {
     getFromLocalStorage();
-    renderBooks();
+    renderAllBooks();
 }
 
 function getFromLocalStorage() {
-    const myBooks = JSON.parse(localStorage.getItem("myBookstore")) || [];
+    const myBooks = JSON.parse(localStorage.getItem("myBookstore"));
     
     if (myBooks != null) {
         books = myBooks;
-        console.log(books);
-        
     } else {
         alert("Keine Daten vorhanden !")
     }
@@ -18,19 +16,23 @@ function getFromLocalStorage() {
 function saveToLocalStorage() {
     localStorage.setItem("myBookstore", JSON.stringify(books));
 }
-renderBooks();
 
-function renderBooks() {
+function renderBook(i) {
+    const contentRef = document.getElementById('mainContent');
+
+        const userComments = renderUserComments(i);
+        contentRef.innerHTML += createBookCard(i, userComments);
+        renderLikeBtn(i);
+}
+
+function renderAllBooks() {
     const contentRef = document.getElementById('mainContent');
     contentRef.innerHTML = "";
 
     for (let i = 0; i < books.length; i++) {
-        const userComments = renderUserComments(i);
-        contentRef.innerHTML += createBookCard(i, userComments);
-        renderLikeBtn(i);
+        renderBook(i);
     }
     saveToLocalStorage();
-    getFromLocalStorage();
 }
 
 function renderLikeBtn(i) {
@@ -44,8 +46,6 @@ function renderLikeBtn(i) {
     heartBtnRef.innerHTML += /*html*/`
         ${books[i].likes}
     `;
-    saveToLocalStorage();
-    getFromLocalStorage();
 }
 
 function toggleHeart(i) {
@@ -58,8 +58,7 @@ function toggleHeart(i) {
         books[i].likes --;
     }
     saveToLocalStorage();
-    getFromLocalStorage();
-    renderBooks();
+    renderBook(i);
 };
 
 function renderUserComments(i) {
@@ -70,8 +69,6 @@ function renderUserComments(i) {
             userComments += getCommentsTemplate(i, c);
         }
     }
-    saveToLocalStorage();
-    getFromLocalStorage();
     return userComments;
 };
 
@@ -85,7 +82,7 @@ function addComment(i) {
         books[i].comments.push(obj);
     }
     saveToLocalStorage();
-    getFromLocalStorage();
-    renderBooks();
+    renderBook(i);
     inputRef.value = "";
 };
+init();
