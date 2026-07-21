@@ -8,7 +8,7 @@ function createBookCard(i, userComments) {
             
             ${createBookInfo(i)}
             
-            <article id="showComments" class="show-comments">
+            <article class="show-comments">
                 <h3>Kommentare:</h3>
                 <div class="comment-wrapper">
                     ${userComments}

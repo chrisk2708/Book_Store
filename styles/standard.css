@@ -10,7 +10,7 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 90dvh0;
-    /* background-color: #151515; */
+    background-color: rgb(85, 85, 85);
     font-family: "Outfit", "sans-serif";
 }
 

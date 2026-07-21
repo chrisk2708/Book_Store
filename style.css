@@ -14,7 +14,7 @@ header {
         font-size: clamp(36px, calc(28.632px + 2.456vw), 64px);
         font-weight: 700;
         text-transform: uppercase;
-        padding: 40px 0;
+        /* padding: 40px 0; */
     }
 }
 
@@ -219,5 +219,11 @@ header {
 
     :hover {
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        height: 100px;
     }
 }

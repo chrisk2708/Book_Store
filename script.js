@@ -4,11 +4,16 @@ function init() {
 }
 
 function getFromLocalStorage() {
-    let books = JSON.parse(localStorage.getItem('myBookstore'));
+    const myBooks = JSON.parse(localStorage.getItem("myBookstore"));
+    
+    if (myBooks != null) {
+        books = myBooks;
+    }
+    
 }
 
 function saveToLocalStorage() {
-    localStorage.setItem('myBookstore', JSON.stringify(books));
+    localStorage.setItem("myBookstore", JSON.stringify(books));
 }
 
 function renderBooks() {
@@ -16,11 +21,12 @@ function renderBooks() {
     contentRef.innerHTML = "";
 
     for (let i = 0; i < books.length; i++) {
-        let userComments = renderUserComments(i);
+        const userComments = renderUserComments(i);
         contentRef.innerHTML += createBookCard(i, userComments);
         renderLikeBtn(i);
     }
     saveToLocalStorage();
+    getFromLocalStorage();
 }
 
 function renderLikeBtn(i) {
@@ -34,6 +40,8 @@ function renderLikeBtn(i) {
     heartBtnRef.innerHTML += /*html*/`
         ${books[i].likes}
     `;
+    saveToLocalStorage();
+    getFromLocalStorage();
 }
 
 function toggleHeart(i) {
@@ -49,7 +57,7 @@ function toggleHeart(i) {
 };
 
 function renderUserComments(i) {
-    let userComments = "";
+    userComments = "";
     
     if (books[i].comments.length > 0) {
         for (let c = 0; c < books[i].comments.length; c++) {
@@ -61,15 +69,16 @@ function renderUserComments(i) {
 };
 
 function addComment(i) {
-    let inputRef = document.getElementById(`inputComment${i}`).value;
-    let obj = { name: "default", comment: "default" };
+    const inputRef = document.getElementById(`inputComment${i}`).value;
+    const obj = { name: "default", comment: "default" };
 
-    if (inputRef != "") {
+    if (inputRef.value != "") {
         obj.name = "User";
         obj.comment = inputRef;
         books[i].comments.push(obj);
-        saveToLocalStorage();
-        renderBooks();
     }
+    saveToLocalStorage();
+    // getFromLocalStorage();
+    renderBooks();
     inputRef.value = "";
 }
