@@ -58,7 +58,7 @@ function toggleHeart(i) {
         books[i].likes --;
     }
     saveToLocalStorage();
-    renderBook(i);
+    renderAllBooks();
 };
 
 function renderUserComments(i) {
@@ -82,7 +82,7 @@ function addComment(i) {
         books[i].comments.push(obj);
     }
     saveToLocalStorage();
-    renderBook(i);
+    renderAllBooks();
     inputRef.value = "";
 };
 init();
